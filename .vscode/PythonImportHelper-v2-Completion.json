@@ -1,0 +1,63 @@
+[
+    {
+        "label": "flet",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "flet",
+        "description": "flet",
+        "detail": "flet",
+        "documentation": {}
+    },
+    {
+        "label": "card",
+        "importPath": "widget.card",
+        "description": "widget.card",
+        "isExtraImport": true,
+        "detail": "widget.card",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "card",
+        "kind": 6,
+        "importPath": "widget.card",
+        "description": "widget.card",
+        "peekOfCode": "class card(ft.Card):\n    img_src = ''\n    episode = ''\n    anime_name =''\n    last_update  ='' \n    card_height = 0\n    card_width = 0\n    def __init__(self,width,height,*args): \n        super().__init__(*args) \n        self.height = height",
+        "detail": "widget.card",
+        "documentation": {}
+    },
+    {
+        "label": "border_radius",
+        "kind": 5,
+        "importPath": "widget.card",
+        "description": "widget.card",
+        "peekOfCode": "border_radius = 10,\ncontent=ft.Row([\n    self.image,\n    ft.Column(\n        spacing=40,   \n        controls=[\n        ft.Container(\n            width=(self.card_width - self.card_width/4) - 38.5,\n            height=self.card_height/3,\n            border_radius = 10,",
+        "detail": "widget.card",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main(page: ft.Page):  \n    page.appbar = ft.AppBar(\n        title=ft.Text(\"My App Example\"), \n        center_title=True,\n        toolbar_height=40)  \n    page.scroll = True  \n    page.title = 'my test app'\n    print(page.height)\n    for i in range(6):  \n        opject = card",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "def main(page: ft.Page):\n    def button_click(e):\n        page.splash = ft.ProgressRing()\n        btn.disabled = True\n        page.update()\n        sleep(3)\n        page.splash = None\n        btn.disabled = False\n        page.update()\n    btn = ft.ElevatedButton(\"Do some lengthy task!\", on_click=button_click)",
+        "detail": "test",
+        "documentation": {}
+    }
+]
