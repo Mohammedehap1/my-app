@@ -9,6 +9,14 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "flet",
+        "description": "flet",
+        "isExtraImport": true,
+        "detail": "flet",
+        "documentation": {}
+    },
+    {
         "label": "card",
         "importPath": "widget.card",
         "description": "widget.card",
@@ -17,11 +25,11 @@
         "documentation": {}
     },
     {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
+        "label": "card",
+        "importPath": "widget.card",
+        "description": "widget.card",
         "isExtraImport": true,
-        "detail": "time",
+        "detail": "widget.card",
         "documentation": {}
     },
     {
@@ -47,7 +55,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def main(page: ft.Page):  \n    page.appbar = ft.AppBar(\n        title=ft.Text(\"My App Example\"), \n        center_title=True,\n        toolbar_height=40)  \n    page.scroll = True  \n    page.title = 'my test app'\n    print(page.height)\n    for i in range(6):  \n        opject = card",
+        "peekOfCode": "def main(page: ft.Page):  \n    def show_drawer(e):\n        page.drawer.open = True\n        page.drawer.update() \n    page.appbar = ft.AppBar(\n        title=ft.Text(\"My App Example\"), \n        center_title=True,\n        toolbar_height=40,\n        leading=ft.IconButton(icon=ft.icons.MENU,on_click=show_drawer) \n        )",
         "detail": "main",
         "documentation": {}
     },
@@ -56,7 +64,7 @@
         "kind": 2,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "def main(page: ft.Page):\n    def button_click(e):\n        page.splash = ft.ProgressRing()\n        btn.disabled = True\n        page.update()\n        sleep(3)\n        page.splash = None\n        btn.disabled = False\n        page.update()\n    btn = ft.ElevatedButton(\"Do some lengthy task!\", on_click=button_click)",
+        "peekOfCode": "def main(page :Page):\n    page.add(card())\napp(target=main,view=WEB_BROWSER)",
         "detail": "test",
         "documentation": {}
     }
